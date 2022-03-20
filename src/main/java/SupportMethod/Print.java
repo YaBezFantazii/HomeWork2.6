@@ -5,7 +5,7 @@ import com.company.Main;
 
 public class Print {
 
-    // Метод, печатающий в консоль ходы игры, полученные из xml файла
+    // Метод, печатающий в консоль ходы игры, полученные из файла
     public static void Print(){
 
         GameList GameList = com.company.GameList.getInstance();
