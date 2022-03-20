@@ -1,0 +1,72 @@
+{
+	"Gameplay": {
+		"Player": [
+			{
+				"_id": "1",
+				"_name": "Igor",
+				"_symbol": "X"
+			},
+			{
+				"_id": "2",
+				"_name": "Anna",
+				"_symbol": "O"
+			}
+		],
+		"Game": {
+			"Step": [
+				{
+					"_num": "1",
+					"_playerId": "1",
+					"__text": "22"
+				},
+				{
+					"_num": "2",
+					"_playerId": "2",
+					"__text": "13"
+				},
+				{
+					"_num": "3",
+					"_playerId": "1",
+					"__text": "31"
+				},
+				{
+					"_num": "4",
+					"_playerId": "2",
+					"__text": "11"
+				},
+				{
+					"_num": "5",
+					"_playerId": "1",
+					"__text": "12"
+				},
+				{
+					"_num": "6",
+					"_playerId": "2",
+					"__text": "33"
+				},
+				{
+					"_num": "7",
+					"_playerId": "1",
+					"__text": "23"
+				},
+				{
+					"_num": "8",
+					"_playerId": "2",
+					"__text": "21"
+				},
+				{
+					"_num": "9",
+					"_playerId": "1",
+					"__text": "32"
+				}
+			]
+		},
+		"GameResult": {
+			"Player": {
+				"_id": "1",
+				"_name": "Igor",
+				"_symbol": "X"
+			}
+		}
+	}
+}
