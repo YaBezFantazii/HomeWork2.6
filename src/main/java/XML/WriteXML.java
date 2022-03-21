@@ -127,7 +127,7 @@ public class WriteXML implements WriteRead.Write {
             }
             StreamResult StreamResult =  new StreamResult(new File(result));
             transformer.transform(source, StreamResult);
-            System.out.println("Запись данных об игре успешно завершена. Путь: "+result+"\n");
+            System.out.println("Запись данных об игре успешно завершена. Путь: "+result);
 
 
         } catch (ParserConfigurationException e) {

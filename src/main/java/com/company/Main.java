@@ -19,7 +19,7 @@ public class Main {
         String CheckNew = "";
         String Player;
         Boolean CheckWin;
-        int number, DeadHeat, FileNum;
+        int number, DeadHeat;
         // Массив с результатами игр. Элементами массива являются объекты класса Logs.
         ArrayList<Logs> GameList = new ArrayList<>();
         // Вспомогательный объект класса GameListXML для записи результатов в xml
@@ -149,59 +149,11 @@ public class Main {
 
             // Получения списка xml файлов
             } else if (CheckNew.equals("xml")){
-                String[] files;
-                File f = new File(new File("").getAbsolutePath()+"\\XML");
-                // Фильтр, чтобы отображались только файлы с расширением xml
-                FilenameFilter filter = new FilenameFilter() {
-                    @Override
-                    public boolean accept(File dir, String name) {
-                        return name.endsWith(".xml");
-                    }};
-                files = f.list(filter);
-                System.out.println("Введите номер файла, указанный слева перед скобкой, чтобы напечатать его. Чтобы выйти из режима чтения XML " +
-                        "введите любое другое число (например 0)");
-                // Список xml файлов, лежащих в корневой папке проекта
-                for (int i=0;i<files.length;i++){
-                    System.out.println(" "+(i+1)+") "+files[i]);
-                }
-                // Считываем, какую игру хотим посмотреть
-                FileNum = console.nextInt();
-                // Если введеное число не соответсвует никакому файлу из перечисленных просто выходим в главное меню
-                if ((FileNum<=files.length)&(FileNum>0)){
-                    // Получаем информацию из xml файла
-                    WriteRead.Read ReadXML = new ReadXML();
-                    ReadXML.Read(files[FileNum-1]);
-                    xml.clearCell();
-                }
-                console.nextLine();
+                WriteRead.Read.FormatFile("xml");
 
             // Получения списка json файлов
             } else if (CheckNew.equals("json")){
-                String[] files;
-                File f = new File(new File("").getAbsolutePath()+"\\JSON");
-                // Фильтр, чтобы отображались только файлы с расширением json
-                FilenameFilter filter = new FilenameFilter() {
-                    @Override
-                    public boolean accept(File dir, String name) {
-                        return name.endsWith(".json");
-                    }};
-                files = f.list(filter);
-                System.out.println("Введите номер файла, указанный слева перед скобкой, чтобы напечатать его. Чтобы выйти из режима чтения XML " +
-                        "введите любое другое число (например 0)");
-                // Список xml файлов, лежащих в корневой папке проекта
-                for (int i=0;i<files.length;i++){
-                    System.out.println(" "+(i+1)+") "+files[i]);
-                }
-                // Считываем, какую игру хотим посмотреть
-                FileNum = console.nextInt();
-                // Если введеное число не соответсвует никакому файлу из перечисленных просто выходим в главное меню
-                if ((FileNum<=files.length)&(FileNum>0)){
-                    // Получаем информацию из json файла
-                    WriteRead.Read ReadJSON = new ReadJSON();
-                    ReadJSON.Read(files[FileNum-1]);
-                    xml.clearCell();
-                }
-                console.nextLine();
+                WriteRead.Read.FormatFile("json");
 
                 // Можно вводить только "y" "n" "r" "xml" "json"
             } else {
