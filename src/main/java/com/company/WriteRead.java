@@ -19,7 +19,9 @@ public class WriteRead {
 
         void Read(String path);
 
-        // Статический метод, для вывода списка файлов (xml или json), и выбора, какой файл мы хотим прочитать
+        // Вспомогательный статический метод, для вывода списка файлов (xml или json), и выбора, какой файл мы хотим прочитать.
+        // Через него осуществляется работа с классами, которые реализованы интерфейсом Read, но это не обязательно, если мы в переменную
+        // path ( void Read(String path); ) сразу передадим путь к нужному файлу.
         static void FormatFile (String format){
             com.company.GameList Gamelist = com.company.GameList.getInstance();
             Scanner console = new Scanner(System.in);
